@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FISCHERINSEL ART — Official Site</title>
+  <meta name="description" content="Fischerinsel Art — Music, Light, and Imagination." />
+  <style>
+    :root {
+      --bg:#0f0f0f; --fg:#ffffff; --muted:#bdbdbd;
+      --lavender:#A7ADC6;
+      --emerald:#009473;
+      --card:#1a1a1a; --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      background:var(--bg);color:var(--fg);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Pretendard,sans-serif;
+      display:flex;flex-direction:column;align-items:center;justify-content:center;
+      text-align:center;padding:48px 0 64px;overflow-x:hidden;
+    }
+    @keyframes logoFade{
+      0%{opacity:0;transform:scale(.8)rotate(-8deg);}
+      60%{opacity:1;transform:scale(1.05)rotate(3deg);}
+      100%{opacity:1;transform:scale(1)rotate(0);}
+    }
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+    header img{
+      width:260px;
+      border-radius:50%;
+      margin-bottom:1.8rem;
+      animation:logoFade 1.8s ease-out forwards;
+    }
+    h1{
+      font-weight:600;letter-spacing:.02em;margin-bottom:.25rem;
+      font-size:clamp(28px,4vw,40px);opacity:0;
+      animation:fadeUp 1.2s ease forwards;animation-delay:1s;
+    }
+    .tag{
+      color:var(--lavender);margin:.25rem 0 2.4rem;
+      font-size:clamp(14px,2.4vw,16px);
+      opacity:.9;animation:fadeUp 1.5s ease forwards;animation-delay:1.3s;
+    }
+    .grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;width:90%;max-width:900px;margin:0 auto 32px;opacity:0;
+      animation:fadeUp 1.5s ease forwards;animation-delay:1.7s;
+    }
+    .card{
+      position:relative;overflow:hidden;border-radius:18px;
+      background:var(--card);border:1px solid var(--border);
+      transition:transform .3s ease, box-shadow .3s ease;
+      text-align:left;color:#fff;min-height:360px;
+    }
+    .card img{
+      width:100%;height:100%;object-fit:cover;filter:brightness(60%);
+      position:absolute;top:0;left:0;z-index:0;transition:filter .4s ease;
+    }
+    .card:hover img{filter:brightness(80%) saturate(110%);}
+    .overlay{
+      position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.8));
+      z-index:1;
+    }
+    .content{
+      position:relative;z-index:2;padding:22px;
+      display:flex;flex-direction:column;justify-content:flex-end;height:100%;
+    }
+    .card h2{font-size:1.2rem;margin-bottom:.4rem;color:var(--lavender);}
+    .card p{font-size:.92rem;color:var(--muted);line-height:1.5;margin-bottom:1rem;}
+    .btn{
+      display:inline-block;align-self:flex-start;padding:9px 14px;border-radius:8px;
+      background:var(--emerald);color:#fff;text-decoration:none;font-weight:600;
+      font-size:.9rem;transition:background .3s ease;
+    }
+    .btn:hover{background:#00b38f;}
+    .card:hover{transform:translateY(-6px);box-shadow:0 8px 24px rgba(0,148,115,.25);}
+    .links{
+      margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+      opacity:0;animation:fadeUp 1.5s ease forwards;animation-delay:2s;
+    }
+    .link{
+      display:inline-flex;align-items:center;gap:8px;color:var(--emerald);
+      text-decoration:none;font-weight:500;padding:8px 10px;border:1px solid var(--border);
+      border-radius:999px;background:rgba(255,255,255,.03);transition:all .3s ease;
+    }
+    .link:hover{border-color:var(--emerald);transform:translateY(-2px);}
+    footer{
+      margin-top:28px;color:#8e8e8e;font-size:12px;opacity:0;
+      animation:fadeUp 1.5s ease forwards;animation-delay:2.2s;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/fischerinsel_logo.png" alt="Fischerinsel Art Logo">
+    <h1>FISCHERINSEL ART</h1>
+    <div class="tag">Music, Light, and Imagination</div>
+  </header>
+
+  <section class="grid" aria-label="공연 포트폴리오">
+    <article class="card">
+      <img src="images/incheon_poster.jpg" alt="From here to everywhere 포스터">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>From here to everywhere…</h2>
+        <p>기타와 피리, 그리고 영상이 직조하는 감성의 무대.<br>도시의 소음에서 자연의 숨결로 이어지는 여정.</p>
+        <a class="btn" href="https://fischerinsel-art.github.io/2025-INCHEON-IN/" target="_blank" rel="noopener">공연 페이지 열기</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/sac_poster.jpg" alt="Musicscape: 그림자의 경계에서 포스터">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>Musicscape: 그림자의 경계에서</h2>
+        <p>빛과 어둠, 경계의 순간 속 인간의 내면을 탐구하는 미디어 퍼포먼스.<br>예술의전당 자유소극장에서.</p>
+        <a class="btn" href="https://fischerinsel-art.github.io/2025-SAC-MUSICSCAPE-AT-THE-EDGE-OF-SHADOW/" target="_blank" rel="noopener">공연 페이지 열기</a>
+      </div>
+    </article>
+  </section>
+
+  <div class="links" aria-label="소셜 및 연락처">
+    <a class="link" href="mailto:fischerinsel2014@gmail.com">✉ 문의하기</a>
+    <a class="link" href="https://instagram.com/fischerinsel" target="_blank" rel="noopener">📷 Instagram</a>
+    <a class="link" href="https://facebook.com/fischerinselart" target="_blank" rel="noopener">📘 Facebook</a>
+  </div>
+
+  <footer>© 2025 Fischerinsel Art. All rights reserved.</footer>
+</body>
+</html>
