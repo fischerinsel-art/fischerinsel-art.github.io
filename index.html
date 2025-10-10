@@ -14,12 +14,18 @@
     }
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
-    body{
-      background:var(--bg);color:var(--fg);
-      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Pretendard,sans-serif;
-      display:flex;flex-direction:column;align-items:center;justify-content:center;
-      text-align:center;padding:48px 0 64px;overflow-x:hidden;
-    }
+      body{
+  background:var(--bg);
+  color:var(--fg);
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Pretendard,sans-serif;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start; /* ← 기존 center에서 변경 */
+  text-align:center;
+  padding:80px 0 64px; /* ← 상단 여백 늘리기 (기존 48px에서 80px로) */
+  overflow-x:hidden;
+}
     @keyframes logoFade{
       0%{opacity:0;transform:scale(.8)rotate(-8deg);}
       60%{opacity:1;transform:scale(1.05)rotate(3deg);}
@@ -89,9 +95,16 @@
       margin-top:28px;color:#8e8e8e;font-size:12px;opacity:0;
       animation:fadeUp 1.5s ease forwards;animation-delay:2.2s;
     }
+@media (max-width: 768px) {
+  body { padding-top: 60px; }
+  header img { width: 220px; }
+}
+
+
   </style>
 </head>
 <body>
+  
   <header>
     <img src="images/fischerinsel_logo.png" alt="Fischerinsel Art Logo">
     <h1>FISCHERINSEL ART</h1>
