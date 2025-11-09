@@ -99,6 +99,14 @@
   body { padding-top: 60px; }
   header img { width: 220px; }
 }
+.btn-row {
+  display: flex;
+  justify-content: center;   /* 가운데 정렬 */
+  align-items: center;
+  gap: 12px;                 /* 버튼 사이 간격 */
+  flex-wrap: wrap;           /* 좁은 화면에서는 자동 줄바꿈 */
+  margin-top: 16px;          /* 위 요소와 간격 */
+}
 
 
   </style>
@@ -120,8 +128,11 @@
       <div class="content">
         <h2>From here to everywhere…</h2>
         <p>최인이 바라본 음악적 풍경 음악·영상·공간이 교차하는 새로운 음악경험<br>도시의 소음에서 자연의 숨결로 이어지는 여정.</p>
-        <a class="btn" href="https://fischerinsel-art.github.io/2025-INCHEON-IN-CHOI-GUITAR-RECITAL/" target="_blank" rel="noopener">공연 페이지 열기</a>
-                <a class="btn" href="https://fischerinsel-art.github.io/2025-INCHEON-IN-CHOI-GUITAR-RECITAL/archive" target="_blank" rel="noopener">공연 아카이빙 페이지 열기</a>
+       <div class="btn-row">
+  <a href="https://2025sac.musicscape.fischerinsel-art.com/" class="btn3d">공연 홍보 페이지</a>
+  <a href="https://2025incheon.fischerinsel-art.com/" class="btn3d">지난 공연 보기</a>
+</div>
+
       </div>
     </article>
 
